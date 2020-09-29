@@ -1,0 +1,20 @@
+{
+  "name": "barbot",
+  "version": "1.0.9",
+  "description": "Weeb Bot",
+  "main": "index",
+  "scripts": {
+    "start": "node index"
+  },
+  "engines": {
+    "node": "8.4.0"
+  },
+  "author": "Reficul",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "express": "^4.17.1",
+    "better-sqlite3": "^6.0.1",
+    "jimp": "^0.9.6"
+  }
+}
