@@ -55,8 +55,8 @@ client.on('message', message => {
         var rawMenu = db.prepare('SELECT * FROM dishes'), menu = []
         for (const dish of rawMenu.iterate()) {
           if (dish.type === args_A[1].toLowerCase()) {
-            menu.push(prefix + dish.name)}}
-      } else { (menu = types), (card = 'Pick a menu:')}
+            menu.push(prefix + dish.name)}}} 
+      else {(menu = types), (card = 'Pick a menu:')}
       var half_length = Math.ceil(menu.length / 2)
       embed.addField(card, menu.slice(0, half_length), true)
       embed.addField('_ _', menu.slice(half_length, menu.length), true)
@@ -69,8 +69,8 @@ client.on('message', message => {
         var rawMenu = db.prepare('SELECT * FROM dishes'), menu = []
         for (const dish of rawMenu.iterate()) {
           if (dish.type === args_A[1].toLowerCase()) {
-            menu.push(dish.name)}}
-      } else { return message.channel.send('Invalid type. (Try Plural)')}
+            menu.push(dish.name)}}} 
+      else { return message.channel.send('Invalid type. (Try Plural)')}
       var dishRandom = client.DB.get(menu[Math.floor(Math.random() * menu.length)])
       var imgs = fs.readdirSync('./images/').filter(obj => obj.startsWith(dishRandom.name.replace(/\s/g, '')  + '_'))
       if (!imgs.length) {return message.channel.send(dishRandom.name + ' has no images...')}
