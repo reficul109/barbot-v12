@@ -70,7 +70,7 @@ client.on('message', message => {
         for (const dish of rawMenu.iterate()) {
           if (dish.type === args_A[1].toLowerCase()) {
             menu.push(dish.name)}}} 
-      else { return message.channel.send('Invalid type. (Try Plural)')}
+      else {return message.channel.send('Invalid type. (Try Plural)')}
       var dishRandom = client.DB.get(menu[Math.floor(Math.random() * menu.length)])
       var imgs = fs.readdirSync('./images/').filter(obj => obj.startsWith(dishRandom.name.replace(/\s/g, '')  + '_'))
       if (!imgs.length) {return message.channel.send(dishRandom.name + ' has no images...')}
